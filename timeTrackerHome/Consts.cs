@@ -6,5 +6,7 @@
         public const string SIGNUPFAILED = "We couldn't create account for you. Please try again";
         public const string CREATEACCOUNTBTN = "Create account";
         public const string LOGINBTN = "Log in";
+        public const string LOGINSUCCESSFUL = "Login successful!";
+        public const string LOGINFAILED = "Login failed! :(";
     }
 }

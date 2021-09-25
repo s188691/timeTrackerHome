@@ -39,13 +39,3 @@ namespace timeTrackerHome
         }
     }
 }
-
-
-//private string m_GithubAccessToken = SensitiveData.GITHUBSECRET;
-//private string m_AppBaseURL = SensitiveData.APPBASEURL;
-//var auth = authProvider.SignInWithEmailAndPasswordAsync(m_Email, m_Password);
-//var firebaseToken = new FirebaseAuth();
-//var firebase = new FirebaseClient(m_AppBaseURL, new FirebaseOptions
-//{
-//    AuthTokenAsyncFactory = () => Task.FromResult(firebaseToken.FirebaseToken)
-//});

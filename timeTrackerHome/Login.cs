@@ -1,15 +1,13 @@
 ﻿using Firebase.Auth;
-using Firebase.Database;
 using System;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace timeTrackerHome
 {
-    class Login //Not working yet ;d
+    class Login
     {
-        private string m_AppBaseURL = SensitiveData.APPBASEURL;
-        private string m_FirebaseApiKey = SensitiveData.FIREBASEAPIKEY;
+        private string m_LoginSuccessful = Consts.LOGINSUCCESSFUL;
+        private string m_LoginFailed = Consts.LOGINFAILED;
         public void LogInUser(FirebaseAuthProvider authProvider, TextBox emialTextBox, TextBox passwordTextBox)
         {
             string email = emialTextBox.Text;
@@ -17,26 +15,23 @@ namespace timeTrackerHome
 
             try
             {
-                FirebaseAuthProvider m_AuthProvider = new FirebaseAuthProvider(new FirebaseConfig(m_FirebaseApiKey));
-
-                authProvider.SignInWithEmailAndPasswordAsync(email, password);
+                var auth = authProvider.SignInWithEmailAndPasswordAsync(email, password);
 
                 emialTextBox.Text = "";
                 passwordTextBox.Text = "";
 
-                var firebaseToken = new FirebaseAuth();
-                var firebase = new FirebaseClient(m_AppBaseURL, new FirebaseOptions
+                if (email == auth.Result.User.Email)
                 {
-                    AuthTokenAsyncFactory = () => Task.FromResult(firebaseToken.FirebaseToken)
-                });
-
-                var test = authProvider.GetUserAsync(firebaseToken);
-
-                MessageBox.Show(test.ToString());
+                    MessageBox.Show(m_LoginSuccessful);
+                }
+                else
+                {
+                    MessageBox.Show(m_LoginFailed);
+                }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                MessageBox.Show("Warrning!");
+                MessageBox.Show(m_LoginFailed);
             }
         }
     }

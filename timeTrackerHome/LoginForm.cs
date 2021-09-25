@@ -18,6 +18,7 @@ namespace timeTrackerHome
         {
             Login login = new Login();
             login.LogInUser(m_AuthProvider, emailTextBoxLogin, passwordTextBoxLogin);
+            //TO DO - Change form after successful login 
         }
 
         private void linkLabelSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
