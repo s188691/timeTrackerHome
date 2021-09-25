@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Firebase.Auth;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,8 @@ namespace timeTrackerHome
         public Form1()
         {
             InitializeComponent();
+            var authProvider = new FirebaseAuthProvider(new FirebaseConfig(FirebaseApiKey))
         }
+
     }
 }
