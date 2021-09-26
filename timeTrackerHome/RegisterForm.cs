@@ -10,6 +10,7 @@ namespace timeTrackerHome
 
         public RegisterForm()
         {
+            this.
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             m_AuthProvider = new FirebaseAuthProvider(new FirebaseConfig(m_FirebaseApiKey));
@@ -35,6 +36,11 @@ namespace timeTrackerHome
             this.Hide();
             loginForm.StartPosition = FormStartPosition.CenterScreen;
             loginForm.ShowDialog();
+            this.Close();
+        }
+
+        private void button1_Click_1(object sender, System.EventArgs e)
+        {
             this.Close();
         }
     }

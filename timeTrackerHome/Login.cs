@@ -29,7 +29,7 @@ namespace timeTrackerHome
                     MessageBox.Show(m_LoginFailed);
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 MessageBox.Show(m_LoginFailed);
             }
