@@ -38,10 +38,5 @@ namespace timeTrackerHome
             loginForm.ShowDialog();
             this.Close();
         }
-
-        private void button1_Click_1(object sender, System.EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

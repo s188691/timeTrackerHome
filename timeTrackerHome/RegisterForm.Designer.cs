@@ -39,7 +39,6 @@ namespace timeTrackerHome
             this.panelLeft = new System.Windows.Forms.Panel();
             this.labelLogoText = new System.Windows.Forms.Label();
             this.labelSignUp = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logoRegister)).BeginInit();
             this.panelLeft.SuspendLayout();
             this.SuspendLayout();
@@ -149,27 +148,12 @@ namespace timeTrackerHome
             this.labelSignUp.TabIndex = 7;
             this.labelSignUp.Text = "Sign Up";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.button1.Location = new System.Drawing.Point(406, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 21);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.ClientSize = new System.Drawing.Size(434, 305);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.labelSignUp);
             this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.linkLabelGithub);
@@ -178,7 +162,7 @@ namespace timeTrackerHome
             this.Controls.Add(this.passwordTextBoxRegister);
             this.Controls.Add(this.emailTextBoxRegister);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "RegisterForm";
             this.Text = "TTH - Register";
             ((System.ComponentModel.ISupportInitialize)(this.logoRegister)).EndInit();
@@ -200,7 +184,6 @@ namespace timeTrackerHome
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Label labelSignUp;
         private System.Windows.Forms.Label labelLogoText;
-        private System.Windows.Forms.Button button1;
     }
 }
 
